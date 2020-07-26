@@ -1,5 +1,5 @@
 <div class="content container" role="main">
-  <mat-card>
+  <mat-card class="mat-elevation-z8">
     <div
       class="content"
       fxLayout="row"
@@ -8,7 +8,7 @@
       fxLayoutGap="5px"
     >
       <div fxFlex="20" class="sec1 p-ad-layout">
-        <mat-card>
+        <mat-card class="mat-elevation-z8">
           <mat-grid-list [cols]="4">
             <mat-grid-tile *ngFor="let agilePointModel of agilePoints">
               <button
@@ -28,48 +28,63 @@
       </div>
       <div fxFlex="50" class="sec2 p-ad-layout">
         <mat-card>
-          second-section
+          <div fxLayout="row">
+            <mat-card fxFlex="25%;" fxFlex.xs="80%">
+              <mat-card-content>
+                <h2>Left Card 1</h2>
+              </mat-card-content>
+            </mat-card>
+          </div>
         </mat-card>
       </div>
       <div fxFlex="30" class="sec3 p-ad-layout">
-        <mat-card>
+        <mat-card class="mat-card card-userstory">
           <mat-card-title><h1>User Stories</h1></mat-card-title>
-          <mat-card-content>
-            <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-              <!-- Position Column -->
-              <ng-container matColumnDef="no">
-                <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
-                <mat-cell *matCellDef="let element">
-                  {{ element.no }}
-                </mat-cell>
-              </ng-container>
+          <mat-card-content class="card-userstory-content">
+            <div class="poker-userstory-container">
+              <mat-table [dataSource]="dataSource">
+                <!-- Position Column -->
+                <ng-container matColumnDef="no">
+                  <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+                  <mat-cell *matCellDef="let element">
+                    {{ element.no }}
+                  </mat-cell>
+                </ng-container>
 
-              <!-- Name Column -->
-              <ng-container matColumnDef="name">
-                <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-                <mat-cell *matCellDef="let element">
-                  {{ element.name }}
-                </mat-cell>
-              </ng-container>
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                  <mat-cell *matCellDef="let element">
+                    {{ element.name }}
+                  </mat-cell>
+                </ng-container>
 
-              <!-- Weight Column -->
-              <ng-container matColumnDef="points">
-                <mat-header-cell *matHeaderCellDef> Points </mat-header-cell>
-                <mat-cell *matCellDef="let element">
-                  {{ element.points }}
-                </mat-cell>
-              </ng-container>
+                <!-- Weight Column -->
+                <ng-container matColumnDef="points">
+                  <mat-header-cell *matHeaderCellDef> Points </mat-header-cell>
+                  <mat-cell *matCellDef="let element">
+                    {{ element.points }}
+                  </mat-cell>
+                </ng-container>
 
-              <mat-header-row
-                *matHeaderRowDef="displayedColumns"
-              ></mat-header-row>
-              <mat-row
-                *matRowDef="let row; columns: displayedColumns"
-              ></mat-row>
-            </mat-table>
+                <mat-header-row
+                  *matHeaderRowDef="displayedColumns"
+                ></mat-header-row>
+                <mat-row
+                  *matRowDef="let row; columns: displayedColumns"
+                ></mat-row>
+              </mat-table>
+            </div>
           </mat-card-content>
-          <mat-card-footer
-            >Section anchored to the bottom of the card
+          <mat-card-footer>
+            <div class="poker-button-row">
+              <button mat-raised-button color="primary">
+                Add User Story
+              </button>
+              <button mat-raised-button color="primary">
+                End Game
+              </button>
+            </div>
           </mat-card-footer>
         </mat-card>
       </div>

@@ -1,7 +1,30 @@
 .p-ad-layout {
-  min-height: 100vh;
+  min-height: 89vh;
 }
 
 .selectedPointbtn {
   background-color: green;
+}
+
+.card-userstory {
+  min-height: 87vh;
+}
+
+.card-userstory-content {
+  min-height: 71vh;
+}
+
+.poker-button-row {
+  padding: 16px;
+}
+
+.poker-button-row button,
+.poker-button-row a {
+  margin-right: 8px;
+}
+
+.poker-userstory-container {
+  max-height: 68vh;
+  width: 550px;
+  overflow: auto;
 }
