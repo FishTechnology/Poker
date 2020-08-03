@@ -1,5 +1,31 @@
 <div class="content container" role="main">
   <mat-card class="mat-elevation-z8">
+    <div class="content max-header" fxLayout="row" fxFlexFill>
+      <mat-toolbar class="mat-toolbar-cus mat-elevation-z2">
+        <span class="poker-spacer"></span>
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+        >
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </mat-toolbar>
+    </div>
     <div
       class="content"
       fxLayout="row"
@@ -28,15 +54,33 @@
       </div>
       <div fxFlex="50" class="sec2 p-ad-layout">
         <mat-card>
-          <div fxLayout="row">
-            <mat-card fxFlex="25%;" fxFlex.xs="80%">
-              <mat-card-content>
-                <div fxLayout="row" fxLayout.xs="column">
-                  <div>5</div>
-                  <div>Sajan Soosai Micheal Sajan Soosai Micheal</div>
+          <mat-grid-list [cols]="4" gutterSize="8px" rowHeight="7rem">
+            <mat-grid-tile
+              class="mat-elevation-z2"
+              *ngFor="let playerPointModel of playerDetails"
+            >
+              <div
+                class="content"
+                fxLayout="row"
+                fxLayout.xs="column"
+                fxFlexFill
+                fxLayoutGap="5px"
+                fxLayoutAlign="center center"
+              >
+                <div style="font-family: webfontZq6K; font-size: 65px;">
+                  <span> {{ playerPointModel.Points }}</span>
                 </div>
-              </mat-card-content>
-            </mat-card>
+                <mat-divider [vertical]="true"></mat-divider>
+                <div class="mat-h2">
+                  {{ playerPointModel.Name }}
+                </div>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </mat-card>
+        <mat-card cdkDrag>
+          <div>
+            I can only be dragged left/right
           </div>
         </mat-card>
       </div>

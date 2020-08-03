@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AgilePointModel } from './models/AgilePointModel';
+import { PlayerDetailModel } from './models/PlayerDetailModel';
 
 @Component({
   selector: 'app-poker-admin',
@@ -8,14 +9,17 @@ import { AgilePointModel } from './models/AgilePointModel';
 })
 export class PokerAdminComponent implements OnInit {
   @Input() agilePoints: Array<AgilePointModel>;
+  @Input() playerDetails: Array<PlayerDetailModel>;
   selectedBtn: string;
   dataSource = ELEMENT_DATA;
+
   displayedColumns: string[] = ['no', 'name', 'points'];
 
   constructor() {}
 
   ngOnInit(): void {
     this.agilePoints = Array<AgilePointModel>();
+    this.playerDetails = Array<PlayerDetailModel>();
 
     let agilePointModel = new AgilePointModel();
     agilePointModel.Point = '0';
@@ -68,11 +72,48 @@ export class PokerAdminComponent implements OnInit {
     agilePointModel = new AgilePointModel();
     agilePointModel.Point = '?';
     this.agilePoints.push(agilePointModel);
+
+    let playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 1;
+    playerDetailModel.Name = 'Sajan Soosai Micheal';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 1';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 2';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 3';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 4';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 5';
+
+    this.playerDetails.push(playerDetailModel);
   }
   toggleColor(point: string): void {
     this.selectedBtn = point;
   }
 }
+
 const ELEMENT_DATA: PeriodicElement[] = [
   { no: 1, name: 'Hydrogen', points: 1.0079 },
   { no: 2, name: 'Helium', points: 4.0026 },
@@ -115,4 +156,9 @@ export interface PeriodicElement {
   name: string;
   no: number;
   points: number;
+}
+
+export interface PlayerDetail {
+  name?: string;
+  points?: number;
 }
