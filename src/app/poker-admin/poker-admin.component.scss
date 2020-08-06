@@ -39,3 +39,21 @@
 .poker-spacer {
   flex: 1 1 auto;
 }
+
+.flippable-card mat-card {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 252px;
+  height: 222px;
+  backface-visibility: hidden;
+}
+
+.flippable-card .back {
+  background: #f0f0f0;
+  transform: rotateY(180deg);
+}
+
+.flippable-card.flipped {
+  transform: rotateY(180deg);
+}

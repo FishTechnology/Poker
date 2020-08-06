@@ -108,6 +108,94 @@ export class PokerAdminComponent implements OnInit {
     playerDetailModel.Name = 'Sajan Soosai Micheal 5';
 
     this.playerDetails.push(playerDetailModel);
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 1';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 2';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 3';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 4';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 5';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 1';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 2';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 3';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 4';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 5';
+
+    this.playerDetails.push(playerDetailModel);
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 1';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 2';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 3';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 4';
+
+    this.playerDetails.push(playerDetailModel);
+
+    playerDetailModel = new PlayerDetailModel();
+    playerDetailModel.Points = 100;
+    playerDetailModel.Name = 'Sajan Soosai Micheal 5';
+
+    this.playerDetails.push(playerDetailModel);
   }
   toggleColor(point: string): void {
     this.selectedBtn = point;
